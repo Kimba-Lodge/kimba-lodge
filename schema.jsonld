@@ -1,0 +1,186 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "@id": "https://www.kimbalodge.co.za/#lodge",
+    "name": "Kimba Lodge",
+    "description": "Self-catering guest lodge in Phalaborwa, less than 2 km from the Phalaborwa Gate of Kruger National Park. Offering uniquely themed rooms, guided safaris, and African hospitality.",
+    "url": "https://www.kimbalodge.co.za/",
+    "logo": "https://www.kimbalodge.co.za/images/kimba-logo.jpg",
+    "image": "https://www.kimbalodge.co.za/images/front-page.jpg",
+    "telephone": "+27849091777",
+    "email": "info@kimbalodge.co.za",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "33 Molengraaff Street",
+      "addressLocality": "Phalaborwa",
+      "addressRegion": "Limpopo",
+      "postalCode": "1390",
+      "addressCountry": "ZA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.9416,
+      "longitude": 31.1406
+    },
+    "priceRange": "$$",
+    "checkinTime": "14:00",
+    "checkoutTime": "10:00",
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Outdoor Swimming Pool", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Boma / Fire Pit", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Conference Room", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Children's Play Area", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Self-Catering Facilities", "value": true }
+    ],
+    "petsAllowed": false,
+    "currenciesAccepted": "ZAR",
+    "paymentAccepted": "Cash, Credit Card, EFT",
+    "numberOfRooms": 5,
+    "containsPlace": [
+      {
+        "@type": "HotelRoom",
+        "name": "Elephant Room",
+        "description": "Grounded earth-tone suite evoking strength and serenity with elegant African motifs."
+      },
+      {
+        "@type": "Suite",
+        "name": "Lion & Cubs Suite",
+        "description": "Interconnected family suite with a secret wardrobe passage connecting the Cubs Room to the Lion Room. Ideal for families with children."
+      },
+      {
+        "@type": "HotelRoom",
+        "name": "Zebra Room",
+        "description": "Bold, modern room with striking black-and-white patterns and dynamic African decor."
+      },
+      {
+        "@type": "HotelRoom",
+        "name": "Baobab Cottage",
+        "description": "Whimsical forest-inspired cottage with tree-shaped beds, ideal for families and children."
+      },
+      {
+        "@type": "HotelRoom",
+        "name": "Victorian Cottage",
+        "description": "Romantic, antique-styled cottage with a private rose garden, perfect for couples."
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/kimbalodge",
+      "https://www.instagram.com/kimbalodge"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": "Kimba Lodge — Kruger Park Gateway",
+    "description": "Kimba Lodge is located less than 2 km from the Phalaborwa Gate of Kruger National Park, making it an ideal base for Kruger safaris, game drives, and wildlife tourism.",
+    "url": "https://www.kimbalodge.co.za/activities.html",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "33 Molengraaff Street",
+      "addressLocality": "Phalaborwa",
+      "addressRegion": "Limpopo",
+      "addressCountry": "ZA"
+    },
+    "touristType": [
+      "Safari travellers",
+      "Wildlife enthusiasts",
+      "Family travellers",
+      "Golfers",
+      "Birding tourists"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How close is Kimba Lodge to Kruger National Park?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kimba Lodge is less than 2 km from the Phalaborwa Gate of Kruger National Park."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I book a room at Kimba Lodge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can book via the 'Book Now' button on the Rooms or Contact page, or contact us directly via WhatsApp at +27 84 909 1777 or email info@kimbalodge.co.za."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cancellation policy at Kimba Lodge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Free cancellation is available up to 7 days before arrival. A 50% deposit is required at booking; the balance is due on arrival."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Wi-Fi available at Kimba Lodge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, free high-speed Wi-Fi is available throughout the lodge."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What activities are available near Kimba Lodge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Activities include guided game drives, walking safaris, river safaris, Kruger Park day trips, cultural visits, and golf at the Hans Merensky Golf Course (500 m from the lodge)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are children welcome at Kimba Lodge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, children of all ages are welcome. Kimba Lodge has family-friendly rooms including the Lion and Cubs Suite and the Baobab Cottage, as well as a dedicated children's play cottage."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.kimbalodge.co.za/" },
+      { "@type": "ListItem", "position": 2, "name": "Rooms", "item": "https://www.kimbalodge.co.za/rooms.html" },
+      { "@type": "ListItem", "position": 3, "name": "Facilities", "item": "https://www.kimbalodge.co.za/facilities.html" },
+      { "@type": "ListItem", "position": 4, "name": "Activities", "item": "https://www.kimbalodge.co.za/activities.html" },
+      { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://www.kimbalodge.co.za/contact.html" },
+      { "@type": "ListItem", "position": 6, "name": "FAQ", "item": "https://www.kimbalodge.co.za/faq.html" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.kimbalodge.co.za/#business",
+    "name": "Kimba Lodge",
+    "telephone": "+27849091777",
+    "email": "info@kimbalodge.co.za",
+    "url": "https://www.kimbalodge.co.za/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "33 Molengraaff Street",
+      "addressLocality": "Phalaborwa",
+      "addressRegion": "Limpopo",
+      "postalCode": "1390",
+      "addressCountry": "ZA"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    ]
+  }
+]

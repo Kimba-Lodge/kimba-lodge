@@ -7,7 +7,7 @@ $htmlFile = "c:\Users\Roberto\Desktop\Kimba-Lodge\kimba_lodge_complete.html"
 
   <header class="site-header home-header">
     <div class="wrap">
-      <a class="logo" href="#home"><img src="images/kimba-logo.jpg" alt="Kimba Lodge logo" class="site-logo"></a>
+      <a class="logo" href="#home"><img src="images/logo3.png" alt="Kimba Lodge logo" class="site-logo"></a>
       <div class="social-links" aria-label="Social links">
         <a class="facebook" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
           <svg class="icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">

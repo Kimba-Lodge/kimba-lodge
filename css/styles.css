@@ -53,7 +53,7 @@ body.lounge-page {
 }
 
 body.conference-page {
-  background-image: url('../images/ships1.jpg');
+  background-image: url('../images/ships 1.png');
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -387,7 +387,10 @@ a {
 /* Ensure the image logo centers inside the anchor */
 .site-logo {
   display: block;
-  margin: 0 auto
+  margin: 0 auto;
+  width: 150px;
+  height: auto;
+  max-width: 100%;
 }
 
 .site-header .wrap {
@@ -552,18 +555,6 @@ a {
 .rooms-page .main-nav a {
   margin: 0 12px;
   font-size: 1.375rem
-}
-
-.rooms-page .features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px
-}
-
-.rooms-page .card {
-  max-width: 450px;
-  width: 100%
 }
 
 .rooms-page .card a {
@@ -829,56 +820,217 @@ body.facilities-page {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4)
 }
 
+.lounge-page main {
+  max-width: 1500px;
+  width: 94vw;
+}
+
+.lounge-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.lounge-images img {
+  width: 100%;
+  max-width: calc(50% - 10px);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.rooms-page main {
+  max-width: 1500px;
+  width: 94vw;
+  padding: 36px;
+}
+
 .activities-page .wrap {
   max-width: 100%;
 }
 
-.activities-page .features {
+.rooms-page .wrap {
+  max-width: 100%;
+}
+
+.activities-page .features,
+.rooms-page .features {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 34px;
 }
 
-.activities-page .card {
-  border: 1px solid #ff8c00 !important;
-  padding: 30px;
-  border-radius: 12px;
+.activities-page .card,
+.rooms-page .card {
+  border: 1px solid rgba(255, 140, 0, 0.5) !important;
+  padding: 34px;
+  border-radius: 10px;
   margin-bottom: 30px;
   width: 100%;
+  background: rgba(255, 255, 255, 0.035) !important;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22) !important;
 }
 
-.activities-page .card h3 {
+.activities-page .card h3,
+.rooms-page .card h3 {
   text-align: center !important;
-  margin-bottom: 20px;
-  font-size: 1.6rem;
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  letter-spacing: 0;
+  line-height: 1.2;
 }
 
-.activities-page .card-body {
+.rooms-page .card h3 a {
+  color: var(--primary-orange);
+}
+
+.activities-page .card-body,
+.rooms-page .card-body {
   display: flex;
   align-items: flex-start;
-  gap: 30px;
+  gap: 38px;
 }
 
-.activities-page .card-body figure {
+.rooms-page .card-body {
+  align-items: center;
+}
+
+.activities-page .card-body figure,
+.rooms-page .card-body figure {
   flex: 0 0 45%;
   max-width: 45%;
   margin: 0;
 }
 
-.activities-page .card-body figure img {
+.activities-page .card-body figure img,
+.rooms-page .card-body figure img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
   object-fit: cover;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32);
 }
 
-.activities-page .card-text {
+.activities-page .card-text,
+.rooms-page .card-text {
   flex: 1;
 }
 
-.activities-page .card-text p {
+.rooms-page .card-text {
+  text-align: center;
+  max-width: 650px;
+}
+
+.rooms-page .card-text .room-details {
+  list-style: none;
+  margin: 22px auto 24px;
+  max-width: 560px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(255, 140, 0, 0.52);
+  border-bottom: 1px solid rgba(255, 140, 0, 0.52);
+  text-align: left;
+}
+
+.rooms-page .card-text .room-details li {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.34fr) 1fr;
+  gap: 14px;
+  align-items: baseline;
+  margin: 0;
+  padding: 7px 0;
+  line-height: 1.45;
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-align: left;
+}
+
+.rooms-page .card-text .room-details strong {
+  color: var(--primary-orange);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-size: 0.76rem;
+}
+
+.rooms-page .card-text .room-details span {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.activities-page .card-text p,
+.rooms-page .card-text p {
   text-align: left !important;
   line-height: 1.7;
+}
+
+.rooms-page .card-text p {
+  text-align: center !important;
+  max-width: 620px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.rooms-page .card .btn {
+  display: inline-block;
+  margin-top: 2px;
+  padding: 11px 20px;
+  border: 1px solid rgba(255, 140, 0, 0.45);
+  border-radius: 6px;
+  background: rgba(255, 140, 0, 0.92);
+  color: #111 !important;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24);
+}
+
+.rooms-page .card .btn:hover,
+.rooms-page .card .btn:focus {
+  background: #fff;
+  color: #111 !important;
+}
+
+@media (max-width: 768px) {
+  .activities-page .card-body,
+  .rooms-page .card-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .activities-page .card-body figure,
+  .rooms-page .card-body figure {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .rooms-page main {
+    padding: 22px;
+    width: 94vw;
+  }
+
+  .rooms-page .card {
+    padding: 24px 18px;
+  }
+
+  .rooms-page .card-text .room-details li {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    text-align: center;
+  }
+
+  .rooms-page .card-text .room-details {
+    text-align: center;
+  }
+
+  .room-details .detail-list li {
+    grid-template-columns: 1fr;
+    gap: 3px;
+    text-align: center;
+  }
+
+  .room-details .detail-list {
+    text-align: center;
+  }
 }
 
 /* Ensure all images inside main are contained */
@@ -966,8 +1118,9 @@ main .pool-image-placeholder {
 }
 
 .victorian-page p {
-  font-family: 'Great Vibes', cursive;
-  font-size: 1.875rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
   text-align: center
 }
 
@@ -1046,6 +1199,97 @@ li {
   text-align: left
 }
 
+.elephant-page h1,
+.lion-page h1,
+.baobab-page h1,
+.victorian-page h1,
+.zebra-box h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.3rem, 4vw, 3.6rem);
+  letter-spacing: 0;
+}
+
+.elephant-page main,
+.lion-page main,
+.baobab-page main,
+.victorian-page main,
+.zebra-box {
+  border: 1px solid rgba(255, 140, 0, 0.38);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.42);
+}
+
+.elephant-page main > p,
+.lion-page main > p,
+.baobab-page main > p,
+.victorian-page main > p,
+.zebra-box > p {
+  max-width: 880px;
+  margin: 18px auto;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+.elephant-page .room-details,
+.lion-page .room-details,
+.baobab-page .room-details,
+.victorian-page .room-details,
+.conference-page .room-details,
+.zebra-box .room-details {
+  max-width: 760px;
+  margin: 34px auto;
+  padding: 0;
+}
+
+.elephant-page .room-details h2,
+.lion-page .room-details h2,
+.baobab-page .room-details h2,
+.victorian-page .room-details h2,
+.conference-page .room-details h2,
+.zebra-box .room-details h2 {
+  margin-bottom: 16px;
+  color: var(--primary-orange);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.55rem;
+}
+
+.room-details .detail-list {
+  display: block;
+  list-style: none;
+  width: 100%;
+  margin: 0 auto;
+  padding: 18px 0;
+  border-top: 1px solid rgba(255, 140, 0, 0.55);
+  border-bottom: 1px solid rgba(255, 140, 0, 0.55);
+  text-align: left;
+}
+
+.room-details .detail-list li {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.34fr) 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding: 8px 0;
+  color: rgba(255, 255, 255, 0.94) !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.room-details .detail-list strong {
+  color: var(--primary-orange);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.room-details .detail-list span {
+  color: rgba(255, 255, 255, 0.94);
+}
+
 main {
   border: none !important;
   /* box-shadow: none !important */
@@ -1098,16 +1342,9 @@ main {
   margin: 10px auto
 }
 
-/* Script font for homepage hero title */
-.hero h1 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 3.2rem
-}
-
 /* Hero */
 .hero {
   padding: 40px 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0));
   border-radius: 4px
 }
 
@@ -1500,4 +1737,300 @@ header nav a,
 .main-nav a:visited {
   color: #000 !important;
   -webkit-text-fill-color: #000 !important;
+}
+
+/* Homepage polish */
+.home-page main {
+  max-width: 1450px;
+  width: min(96vw, 1450px);
+  padding: 46px;
+  border: 1px solid rgba(255, 140, 0, 0.32);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.42);
+}
+
+.home-page .hero {
+  padding: 8px 0 42px;
+}
+
+.home-page .hero-inner {
+  max-width: 100%;
+}
+
+.home-page .hero-figure {
+  max-width: 1180px;
+  margin: 0 auto 30px;
+}
+
+.home-page .hero-figure img {
+  border-radius: 10px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.42);
+}
+
+.home-page .hero h1 {
+  max-width: 1050px;
+  margin: 0 auto 18px;
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: clamp(2.7rem, 5vw, 5.1rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0;
+  color: #fff !important;
+}
+
+.home-page .lead,
+.home-page .intro p {
+  max-width: 1080px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.04rem;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+.home-page .hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 28px auto 0;
+}
+
+.home-page .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 140, 0, 0.5);
+  background: rgba(255, 140, 0, 0.92);
+  color: #111 !important;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+}
+
+.home-page .btn.alt {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
+.home-page .btn:hover,
+.home-page .btn:focus {
+  background: #fff;
+  color: #111 !important;
+}
+
+.home-page .intro {
+  max-width: 1120px;
+  margin: 0 auto 36px;
+  padding: 34px 0 8px;
+  border-top: 1px solid rgba(255, 140, 0, 0.42);
+  border-bottom: 1px solid rgba(255, 140, 0, 0.42);
+}
+
+.home-page .intro h2 {
+  margin-bottom: 16px;
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: clamp(2.1rem, 3.3vw, 3.4rem);
+  line-height: 1.15;
+  letter-spacing: 0;
+  color: var(--primary-orange) !important;
+}
+
+.home-page .features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 100%;
+  margin: 30px auto 0;
+}
+
+.home-page .features .card {
+  min-height: 100%;
+  padding: 28px;
+  border: 1px solid rgba(255, 140, 0, 0.4) !important;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.045) !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24) !important;
+}
+
+.home-page .features .card h3 {
+  margin-bottom: 12px;
+  color: var(--primary-orange) !important;
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.home-page .features .card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.home-page .site-footer p {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .home-page main {
+    padding: 26px;
+  }
+
+  .home-page .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-page main {
+    width: 94vw;
+    padding: 22px 16px;
+  }
+
+  .home-page .lead,
+  .home-page .intro p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+}
+
+/* Facilities page polish */
+.facilities-page main {
+  max-width: 1450px;
+  width: min(96vw, 1450px);
+  padding: 46px;
+  border: 1px solid rgba(255, 140, 0, 0.32);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.42);
+}
+
+.facilities-page .intro {
+  max-width: 100%;
+}
+
+.facilities-page h1 {
+  margin: 0 auto 14px;
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: clamp(2.7rem, 5vw, 5.1rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.facilities-page .lead {
+  max-width: 850px;
+  margin: 0 auto 34px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 140, 0, 0.42);
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.04rem;
+  line-height: 1.8;
+}
+
+.facilities-page .facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.facilities-page .facility {
+  border: 1px solid rgba(255, 140, 0, 0.4);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+}
+
+.facilities-page .children-cottage {
+  grid-column: 1 / -1;
+  max-width: 760px;
+  justify-self: center;
+}
+
+.facilities-page .facility-link {
+  display: grid;
+  gap: 0;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.facilities-page .facility figure {
+  width: 100%;
+  margin: 0;
+}
+
+.facilities-page .facility img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+}
+
+.facilities-page .children-cottage img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  object-position: center top;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.facilities-page .facility h3 {
+  margin: 24px 28px 10px;
+  color: var(--primary-orange) !important;
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: 1.85rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.facilities-page .facility p {
+  margin: 0 28px 28px;
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.facilities-page .facility-link:hover h3,
+.facilities-page .facility-link:focus h3 {
+  color: #fff !important;
+}
+
+@media (max-width: 900px) {
+  .facilities-page main {
+    padding: 26px;
+  }
+
+  .facilities-page .facilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .facilities-page .children-cottage {
+    grid-column: auto;
+    max-width: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .facilities-page main {
+    width: 94vw;
+    padding: 22px 16px;
+  }
+
+  .facilities-page .facility h3 {
+    margin-inline: 20px;
+  }
+
+  .facilities-page .facility p {
+    margin-inline: 20px;
+  }
 }

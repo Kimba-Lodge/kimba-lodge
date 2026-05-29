@@ -39,7 +39,7 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="logo" href="index.html"><img src="images/kimba-logo.jpg" alt="Kimba Lodge logo" class="site-logo"></a>
+      <a class="logo" href="index.html"><img src="images/logo3.png" alt="Kimba Lodge logo" class="site-logo"></a>
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="rooms.html">Rooms</a>
@@ -72,17 +72,17 @@
 
     <section class="room-details">
       <h2>Suite Details</h2>
-      <p><strong>Capacity:</strong> Up to 4 people</p>
-      <p><strong>Includes:</strong></p>
-      <ul>
-        <li>Regal King bed in the Lion Room</li>
-        <li>Two comfortable beds in the Cubs Room</li>
-        <li>Secret interconnected wardrobe passage</li>
-        <li>Private lounge area and minibar</li>
-        <li>En-suite bathroom with premium amenities</li>
-        <li>Air conditioning and high-speed Wi-Fi</li>
+      <ul class="detail-list">
+        <li><strong>Rooms</strong><span>3</span></li>
+        <li><strong>Layout</strong><span>Two bedrooms and one small lounge</span></li>
+        <li><strong>Sleeps</strong><span>4</span></li>
+        <li><strong>Beds</strong><span>Two single beds and one king size bed</span></li>
+        <li><strong>Bathroom</strong><span>Common bathroom between rooms</span></li>
+        <li><strong>Comfort</strong><span>Smart TV and air conditioning in bedrooms</span></li>
       </ul>
     </section>
+    <button class="btn book-btn" id="bookNowBtn" data-book-room data-room="Lion & Cubs Suite"
+      aria-label="Open booking form for Lion and Cubs Suite" tabindex="0">Book Now</button>
 
     <section class="gallery">
       <a href="images/cubs2.jpg" data-gallery="lion" class="featured-image"><img src="images/cubs2.jpg" alt="Cubs Room photo 2"></a>
@@ -90,6 +90,33 @@
       <a href="images/lions1.jpg" data-gallery="lion"><img src="images/lions1.jpg" alt="Cubs Room photo 3"></a>
       <a href="images/lions2.jpg" data-gallery="lion"><img src="images/lions2.jpg" alt="Lodge view photo 4"></a>
     </section>
+
+    <div id="bookingModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+      <div class="modal-content">
+        <button id="closeModalBtn" class="close-modal-btn" aria-label="Close booking form" tabindex="0">&times;</button>
+        <h2 id="bookingModalTitle">Book Your Stay</h2>
+        <form id="bookingForm" aria-label="Booking form" autocomplete="on">
+          <label for="roomSelect">Room(s): <span aria-hidden="true" class="required-asterisk">*</span></label>
+          <span id="roomHelp" class="room-help">Hold Ctrl (Windows) or Command (Mac) to select multiple rooms.</span>
+          <select id="roomSelect" name="room" multiple size="5" class="room-select" aria-describedby="roomHelp"
+            aria-required="true" required>
+            <option value="Elephant Room">Elephant Room</option>
+            <option value="Lion & Cubs Suite">Lion & Cubs Suite</option>
+            <option value="Zebra Room">Zebra Room</option>
+            <option value="Baobab Cottage">Baobab Cottage</option>
+            <option value="Victorian Cottage">Victorian Cottage</option>
+          </select>
+          <label for="checkin">Check-in: <span aria-hidden="true" class="required-asterisk">*</span></label>
+          <input type="date" id="checkin" name="checkin" required aria-required="true" class="modal-input"
+            aria-label="Check-in date"><br>
+          <label for="checkout">Check-out: <span aria-hidden="true" class="required-asterisk">*</span></label>
+          <input type="date" id="checkout" name="checkout" required aria-required="true" class="modal-input"
+            aria-label="Check-out date"><br>
+          <button type="submit" class="btn whatsapp-btn" aria-label="Send booking via WhatsApp">Send via
+            WhatsApp</button>
+        </form>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -99,6 +126,7 @@
   </footer>
 
   <script src="js/gallery.js"></script>
+  <script src="js/booking.js"></script>
 </body>
 
 </html>

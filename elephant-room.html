@@ -49,7 +49,7 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="logo" href="index.html"><img src="images/kimba-logo.jpg" alt="Kimba Lodge logo" class="site-logo"></a>
+      <a class="logo" href="index.html"><img src="images/logo3.png" alt="Kimba Lodge logo" class="site-logo"></a>
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="rooms.html">Rooms</a>
@@ -79,21 +79,46 @@
       you are encouraged to slow down, to remember what endures, and to carry that calm with you when you leave.</p>
     <section class="room-details">
       <h2>Room Details</h2>
-      <p><strong>Capacity:</strong> 2 people</p>
-      <p><strong>Includes:</strong></p>
-      <ul>
-        <li>Luxurious King bed</li>
-        <li>En-suite bathroom with shower and bath</li>
-        <li>Work desk with Wi-fi</li>
-        <li>Air conditioning with smart climate control</li>
-        <li>Premium linens and contemporary furnishings</li>
-        <li>Minibar, tea/coffee facilities and smart tv</li>
+      <ul class="detail-list">
+        <li><strong>Bed</strong><span>King bed</span></li>
+        <li><strong>Sleeps</strong><span>2</span></li>
+        <li><strong>Bathroom</strong><span>Ensuite with shower and bathtub</span></li>
+        <li><strong>Comfort</strong><span>Smart TV and air conditioning</span></li>
       </ul>
     </section>
+    <button class="btn book-btn" id="bookNowBtn" data-book-room data-room="Elephant Room"
+      aria-label="Open booking form for Elephant Room" tabindex="0">Book Now</button>
     <section class="gallery">
-      <a href="images/ele1.jpg" data-gallery="elephant"><img src="images/ele1.jpg" alt="Elephant Room photo 1"></a>
+      <a href="images/Ele1.jpg" data-gallery="elephant"><img src="images/Ele1.jpg" alt="Elephant Room photo 1"></a>
       <a href="images/ele3.jpeg" data-gallery="elephant"><img src="images/ele3.jpeg" alt="Elephant Room photo 4"></a>
     </section>
+
+    <div id="bookingModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+      <div class="modal-content">
+        <button id="closeModalBtn" class="close-modal-btn" aria-label="Close booking form" tabindex="0">&times;</button>
+        <h2 id="bookingModalTitle">Book Your Stay</h2>
+        <form id="bookingForm" aria-label="Booking form" autocomplete="on">
+          <label for="roomSelect">Room(s): <span aria-hidden="true" class="required-asterisk">*</span></label>
+          <span id="roomHelp" class="room-help">Hold Ctrl (Windows) or Command (Mac) to select multiple rooms.</span>
+          <select id="roomSelect" name="room" multiple size="5" class="room-select" aria-describedby="roomHelp"
+            aria-required="true" required>
+            <option value="Elephant Room">Elephant Room</option>
+            <option value="Lion & Cubs Suite">Lion & Cubs Suite</option>
+            <option value="Zebra Room">Zebra Room</option>
+            <option value="Baobab Cottage">Baobab Cottage</option>
+            <option value="Victorian Cottage">Victorian Cottage</option>
+          </select>
+          <label for="checkin">Check-in: <span aria-hidden="true" class="required-asterisk">*</span></label>
+          <input type="date" id="checkin" name="checkin" required aria-required="true" class="modal-input"
+            aria-label="Check-in date"><br>
+          <label for="checkout">Check-out: <span aria-hidden="true" class="required-asterisk">*</span></label>
+          <input type="date" id="checkout" name="checkout" required aria-required="true" class="modal-input"
+            aria-label="Check-out date"><br>
+          <button type="submit" class="btn whatsapp-btn" aria-label="Send booking via WhatsApp">Send via
+            WhatsApp</button>
+        </form>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -103,6 +128,7 @@
   </footer>
 
   <script src="js/gallery.js"></script>
+  <script src="js/booking.js"></script>
 </body>
 
 </html>

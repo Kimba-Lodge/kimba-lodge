@@ -1,7 +1,8 @@
 // Booking Modal and WhatsApp Integration Logic
 (function(){
   const modal = document.getElementById('bookingModal');
-  const openBtn = document.getElementById('bookNowBtn');
+  const openBtns = Array.from(document.querySelectorAll('#bookNowBtn, [data-book-room]'));
+  const openBtn = openBtns[0];
   const closeBtn = document.getElementById('closeModalBtn');
   const firstInput = document.getElementById('roomSelect');
   const bookingForm = document.getElementById('bookingForm');
@@ -9,6 +10,11 @@
   // Open modal
   function openModal() {
     if (!modal) return;
+    if (firstInput && this && this.dataset && this.dataset.room) {
+      Array.from(firstInput.options).forEach(option => {
+        option.selected = option.value === this.dataset.room;
+      });
+    }
     modal.classList.add('active');
     modal.setAttribute('aria-hidden','false');
     // distinct styling handled by CSS class .active
@@ -23,7 +29,7 @@
     openBtn && openBtn.focus();
   }
 
-  if (openBtn) openBtn.addEventListener('click', openModal);
+  openBtns.forEach(btn => btn.addEventListener('click', openModal));
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
 
   // Close on outside click
